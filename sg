@@ -1,0 +1,7 @@
+import boto.ec2
+conn = boto.ec2.connect_to_region("region", aws_access_key_id='xxxxxxxxxxxx', aws_secret_access_key='xxxxxxxxxx')
+
+rs = conn.get_all_security_groups()
+sg = rs[1]
+
+print sg.authorize
